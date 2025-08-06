@@ -8,6 +8,7 @@
     flex-direction: row;
     gap: 126px;
     align-items: center;
+    justify-content: center;
 }
 .hero__info 
 {
