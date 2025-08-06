@@ -53,6 +53,11 @@
 .footer__item {
 }
 
+.footer__item a
+{
+    text-decoration: none;
+    color: #fff;
+}
 
 .footer__line 
 {
