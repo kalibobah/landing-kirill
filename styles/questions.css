@@ -77,12 +77,14 @@
         font-size: 25px;
         width: 298px;
         text-align: center;
+        margin: 0 auto;
     }
 
     .questions__items
     {
         gap: 30px;
         width: 318px;
+        margin: 0 auto;
     }
 
     .question__text
