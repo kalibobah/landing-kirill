@@ -5,7 +5,6 @@
 .header__container 
 {
     display: flex;
-    justify-content: center;
     width: 100%;
     height: 77px;
     align-items: center;
@@ -14,7 +13,7 @@
 }
 .header__menu 
 {
-    margin-right: 132px;
+    margin-right: 172px;
 }
 .header__list 
 {
@@ -37,7 +36,8 @@
 {
     font-size: 27px;
     color: #303030;
-    margin-right: 341px;
+    margin-right: 359px;
+    letter-spacing: 8deg;
 
 }
 .header__button 

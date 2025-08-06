@@ -1,15 +1,23 @@
-.propositions {
+.propositions 
+{
+    margin-bottom: 20px;
 }
 .propositions__container 
 {
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding-top: 95px;
     
 }
 
-.propositions__icon {
+.propositions__icon 
+{
+    width: 740px;
+    height: 600px;
 }
+
+
 .propositions__info 
 {
     width: 593px;

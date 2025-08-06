@@ -20,7 +20,9 @@
     gap: 14px;
     margin-right: 105px;
 }
-.contact__icons {
+.contact__icons 
+{
+    margin-top: 35px;
 }
 .footer__button 
 {
@@ -42,6 +44,14 @@
 .footer__menu-list 
 {
     width: 102px;
+    display: flex;
+    flex-direction: column;    
+    gap: 5px;
+}
+
+.footer__menu-list span
+{
+    margin-bottom: 15px;
 }
 
 .footer__menu-list:nth-child(2)
