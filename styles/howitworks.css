@@ -72,12 +72,18 @@
 .howitwork__button 
 {
     background-color: #8800F6;
-    color: #ffffff;
     padding: 11px;
     width: 227px;
     margin-bottom: 60px;
     text-align: center;
 }
+
+.howitwork__button a
+{
+  text-decoration: none;
+  color: #ffffff;
+}
+
 .numbers 
 {
     display: flex;

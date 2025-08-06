@@ -30,7 +30,6 @@
 .hero__button 
 {
     background-color: #8800F6;
-    color: #ffffff;
     padding: 11px;
     width: 356px;
     text-align: center;
@@ -38,6 +37,12 @@
     margin-bottom: 21px;
     order: 1;
 }
+
+.hero__button a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
 .hero__stars 
 {
     font-size: 14px;

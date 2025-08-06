@@ -27,7 +27,6 @@
 .footer__button 
 {
     background-color: #fff;
-    color: #8800f6;
     padding: 11px;
     width: 270px;
     height: 53px;
@@ -35,6 +34,13 @@
     font-size: 22px;
     margin-right: 120px;
 }
+
+.footer__button a
+{
+    text-decoration: none;
+    color: #8800f6;
+}
+
 .footer__menu {
     display: flex;
     flex-direction: row;

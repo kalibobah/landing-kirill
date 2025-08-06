@@ -55,7 +55,9 @@
     </div>
                 <div class="header__button instr-semibold">
                     <button>
-                        Get your Reading!
+                        <a href="#">
+                            Get your Reading!
+                        </a>
                     </button>
                 </div>
 
@@ -79,7 +81,10 @@ Insightful Psychic Reading
                     </div>
 
                     <div class="hero__button instr-semibold">
-                        Get your Reading!
+                        <a href="">
+                            Get your Reading!
+
+                        </a>
                     </div>
 
                     <div class="hero__stars instr-semibold">
@@ -250,7 +255,6 @@ Accuracy Rate
                 
 
            <div class="howitworks__steps">
-  <!-- Шаг 1 -->
   <div class="step_completed">
     <div class="step__icon-wrapper">
       <img src="img/Group 63.png" alt="Step 1">
@@ -259,7 +263,6 @@ Accuracy Rate
     <p class="mont-medium">Complete the Registration Quiz</p>
   </div>
 
-  <!-- Шаг 2 -->
   <div class="step_completed">
     <div class="step__icon-wrapper">
       <img src="img/Group 63.png" alt="Step 2">
@@ -268,7 +271,7 @@ Accuracy Rate
     <p class="mont-medium">Add Payment Method</p>
   </div>
 
-  <!-- Шаг 3 -->
+
   <div class="current__step">
     <div class="step__icon-wrapper">
       <img src="img/Group 64.png" alt="Step 3">
@@ -277,7 +280,7 @@ Accuracy Rate
     <p class="mont-medium">Get your Personalized Readings</p>
   </div>
 
-  <!-- Шаг 4 -->
+
   <div class="next__step">
     <div class="step__icon-wrapper">
       <img src="img/Group 65.png" alt="Step 4">
@@ -289,7 +292,10 @@ Accuracy Rate
 
                 <div class="howitwork__button instr-semibold">
                     <button>
-                        Get your Reading!
+                        <a href="#">
+
+                            Get your Reading!
+                        </a>
                     </button>
                 </div>
 
@@ -708,7 +714,10 @@ questions
                     </div>
                     <div class="footer__button instr-semibold">
                         <button>
-                            Get your Reading!
+                            <a href="#">
+                                Get your Reading!
+
+                            </a>
                         </button>
                     </div>
 
@@ -811,25 +820,35 @@ document.addEventListener("DOMContentLoaded", function () {
     let autoScrollInterval;
     const isMobile = () => window.innerWidth <= 768;
 
-    function showTestimonial(index) {
+    function showTestimonial(index, direction = "right") {
         testimonials.forEach((item, i) => {
-            item.classList.remove("active");
+            item.classList.remove("active", "slide-in-left", "slide-in-right");
         });
-        testimonials[index].classList.add("active");
+
+        const testimonial = testimonials[index];
+        testimonial.classList.add("active");
+
+        if (direction === "left") {
+            testimonial.classList.add("slide-in-left");
+        } else {
+            testimonial.classList.add("slide-in-right");
+        }
     }
 
     function nextSlide() {
+        const prevIndex = currentIndex;
         currentIndex = (currentIndex + 1) % testimonials.length;
-        showTestimonial(currentIndex);
+        showTestimonial(currentIndex, "right");
     }
 
     function prevSlide() {
+        const prevIndex = currentIndex;
         currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-        showTestimonial(currentIndex);
+        showTestimonial(currentIndex, "left");
     }
 
     function startAutoScroll() {
-        autoScrollInterval = setInterval(nextSlide, 5000); // 5 секунд
+        autoScrollInterval = setInterval(nextSlide, 5000);
     }
 
     function stopAutoScroll() {
@@ -841,13 +860,14 @@ document.addEventListener("DOMContentLoaded", function () {
             testimonials.forEach(t => {
                 t.style.position = "relative";
                 t.style.opacity = "1";
-                t.classList.remove("active");
+                t.classList.remove("active", "slide-in-left", "slide-in-right");
             });
             return;
         }
 
         testimonials.forEach(t => t.classList.remove("active"));
         showTestimonial(currentIndex);
+
         startAutoScroll();
 
         nextBtn.addEventListener("click", () => {
@@ -861,6 +881,38 @@ document.addEventListener("DOMContentLoaded", function () {
             prevSlide();
             startAutoScroll();
         });
+
+        // 👇 Добавим свайп жесты
+        addSwipeListeners(itemsContainer);
+    }
+
+    function addSwipeListeners(container) {
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        container.addEventListener("touchstart", e => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        container.addEventListener("touchend", e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const swipeDistance = touchEndX - touchStartX;
+            const minSwipeDistance = 50; // px
+
+            if (Math.abs(swipeDistance) > minSwipeDistance) {
+                stopAutoScroll();
+                if (swipeDistance > 0) {
+                    prevSlide(); // свайп вправо — предыдущий
+                } else {
+                    nextSlide(); // свайп влево — следующий
+                }
+                startAutoScroll();
+            }
+        }
     }
 
     initSlider();
@@ -870,6 +922,7 @@ document.addEventListener("DOMContentLoaded", function () {
         initSlider();
     });
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const questions = document.querySelectorAll(".question");

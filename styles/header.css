@@ -43,8 +43,13 @@
 .header__button 
 {
     background-color: #8800F6;
-    color: #ffffff;
     padding: 11px;
+}
+
+.header__button a
+{
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .header__logo-mobile 
