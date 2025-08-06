@@ -67,6 +67,7 @@
     width: 192px;
     font-size: 10px;
     line-height: 15px;
+    margin-bottom: 8px;
 
 }
 .testimonial__date 
@@ -210,6 +211,11 @@
     .testimonials__items {
         position: relative;
         height: auto;
+    }
+
+    .verified
+    {
+        margin: 8px 0px;
     }
 
 }
