@@ -1,0 +1,165 @@
+.testimonials {
+}
+.testimonials__container 
+{
+    width: 1091px;
+    color: #3F1E48;
+}
+.testimonials__title 
+{
+    font-size: 37px;
+    margin-bottom: 67px;
+    text-align: center;
+    margin-top: 134px;
+}
+.testimonials__items 
+{
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+    justify-content: center;
+}
+.testimonial 
+{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 255px;
+    padding: 14px 9px 22px 20px;
+    gap: 8px;
+    border-radius: 24px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.testimonial.active {
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial__head 
+{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.testimonial__author 
+{
+    font-size: 14px;
+}
+.testimonial__stars 
+{
+    gap: 1px;
+}
+.verified 
+{
+    font-size: 10px;
+    gap: 2px;
+}
+.testimonial__text 
+{
+    width: 192px;
+    font-size: 10px;
+    line-height: 15px;
+
+}
+.testimonial__date 
+{   
+    display: flex;
+    font-size: 10px;
+    justify-content: flex-end;
+}
+.testimonials__footer 
+{
+    margin-top: 38px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.testimonials__buttons {
+    display: none;
+}
+
+.testimonial__btn {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    padding: 0;
+    cursor: pointer;
+}
+
+.testimonial__btn img {
+    width: 21px;
+    height: 21px;
+}
+
+
+.testimonial__btn--prev {
+    left: -40px;
+}
+
+.testimonial__btn--next {
+    right: -40px;
+}
+
+@media (max-width: 768px) 
+{
+    .testimonials__container
+    {
+        width: 255px;
+        position: relative;
+    }
+
+    .testimonials__buttons {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .testimonial__btn {
+        pointer-events: auto;
+    }
+
+    .testimonials__title
+    {
+        font-size: 25px;
+        margin-bottom: 20px;
+        margin-top: 80px;
+    }
+
+    .testimonials__items {
+        position: relative;
+        height: auto;
+    }
+
+    .testimonials__footer div:first-child
+    {
+        display: none;
+    }
+
+    .testimonials__footer
+    {
+        justify-content: center;
+        font-size: 10px;
+        margin-top: 20px;
+    }
+
+    .testimonial__head
+    {
+        gap: 50px;
+    }
+}

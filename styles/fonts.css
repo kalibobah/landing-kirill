@@ -1,0 +1,53 @@
+
+.mont-medium {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+
+.mont-semibold {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+
+.mont-bold {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+
+.franklin-medium {
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 500;
+}
+
+/* Libre Franklin Semibold */
+.franklin-semibold {
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 600;
+}
+
+
+.instr-medium {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 500;
+}
+
+
+.instr-semibold {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 600;
+}
+
+
+.instr-bold {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 700;
+}
+
+
+.junge-regular {
+  font-family: 'Junge', serif;
+  font-weight: 400; 
+}

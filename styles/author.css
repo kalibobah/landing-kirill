@@ -1,0 +1,94 @@
+.author {
+}
+.author__container 
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 72px;
+}
+.author__title 
+{
+    font-size: 37px;
+    margin-bottom: 40px;
+    color: #3F1E48;
+    text-align: center;
+}
+.author__info 
+{
+    margin-left: 183px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    order: 1;
+}
+.author__thesis 
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 11px;
+    width: 569px;
+    font-size: 22px;
+    line-height: 22px;
+    color: #3F1E48;
+}
+.author__photo 
+{
+    order: 2;
+}
+
+
+@media (max-width: 768px) 
+{
+    .author
+    {
+        margin-top: 80px;
+    }
+    
+    .author__container
+    {
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        padding: 0px 40px;
+    }
+
+    .author__title
+    {
+        font-size: 25px;
+        margin-bottom: 28px;
+    }
+
+    .author__thesis
+    {
+        gap: 9px;
+        font-size: 15px;
+        width: 328px;
+    }
+
+    .author__thesis img
+    {
+        width: 39px;
+        height: 39px;
+    }
+
+    .thesis__text
+    {
+        width: 264px;
+
+    }
+
+    .author__info
+    {
+        order: 2;
+        gap: 28px;
+        margin: 0 auto;
+    }
+
+    .author__photo
+    {
+        order: 1;
+    }
+
+}
