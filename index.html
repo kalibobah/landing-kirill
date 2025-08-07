@@ -584,9 +584,6 @@ Accuracy Rate
 
 
                 <div class="testimonials__footer">
-                    <div class="franklin-medium">
-                        Excellent 
-                    </div>
                     <div class="franklin-medium"><span class="franklin-semibold">4.81</span> based on <span class="franklin-semibold">1, 426</span>  reviews</div>
                 </div>
             </div>
@@ -901,14 +898,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         function handleSwipe() {
             const swipeDistance = touchEndX - touchStartX;
-            const minSwipeDistance = 50; // px
+            const minSwipeDistance = 50; 
 
             if (Math.abs(swipeDistance) > minSwipeDistance) {
                 stopAutoScroll();
                 if (swipeDistance > 0) {
-                    prevSlide(); // свайп вправо — предыдущий
+                    prevSlide(); 
                 } else {
-                    nextSlide(); // свайп влево — следующий
+                    nextSlide(); 
                 }
                 startAutoScroll();
             }

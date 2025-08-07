@@ -80,7 +80,7 @@
 {
     margin-top: 38px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     font-size: 14px;
 }
 
